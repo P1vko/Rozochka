@@ -8,6 +8,22 @@ body {
    font-family: Roboto;
    background-color: #c5b8e4;      
    color: #f4f3f8;
+   
+}
+
+body:before {
+   content: '';
+   display: block;
+   position: fixed;
+   background-image: url(../img/main-bg.jpg);
+   background-position: top center;
+   background-repeat: no-repeat;
+   background-size: 100%;
+   height: 100%;
+   width: 100%;
+   z-index: -1;
+   height: 100vh;
+   background-size: cover;
 }
 
 .container {
@@ -20,8 +36,9 @@ body {
    align-items: center;
    justify-content: space-between;
    padding-top: 30px;
-   border-bottom: 1px solid azure;
    margin-bottom: 15px;
+   background-color: #da85af;
+   border-radius: 5px;
 }
 
 .logo, .company {
@@ -33,7 +50,7 @@ body {
 }
 
 .logo {
-   color: #FFE4E1;
+   color: #fff7f7;
    padding-left: 4%
 }
 
@@ -46,7 +63,7 @@ body {
    display: flex;
    justify-content: space-between;
    background: #da85af;
-   border-radius: 3px;
+   border-radius: 5px;
    color: #f4f3f8;
    padding: 3% 4%;
    padding-top: 100px;
@@ -54,7 +71,7 @@ body {
 }
 
 .content:not(:last-child) {
-   border-bottom: 4px solid #c5b8e4;
+   margin-bottom: 4px;
 }
 
 .text {
@@ -85,8 +102,14 @@ body {
    height: auto;
 }
 
+.art {
+   border-bottom-left-radius: 0;
+   border-bottom-right-radius: 0;
+}
+
 .footer {
-   padding: 40px;
+   padding-top: 40px;
+   padding-bottom: 40px;
    background-color: rgb(31, 30, 29);
    display: flex;
    align-items: baseline;
@@ -153,19 +176,56 @@ body {
       padding-left: 0;
    }
    .text {
-      font-size: 13px;
-      line-height: 15px;
+      font-size: 16x;
+      line-height: 24px;
    }
    .footer-title-text {
-      font-size: 15px;
-      line-height: 17px;
+      font-size: 16px;
+      line-height: 20px;
    }
    .footer-subtitle-text {
-      font-size: 13px;
-      line-height: 15px;
+      font-size: 15px;
+      line-height: 20px;
    }
    .footer-copyright {
       font-size: 15px;
-      line-height: 17px;
+      line-height: 20px;
+   }
+   .content {
+      flex-direction: column;
+   }
+   .content div {
+      width: 100%;
+      text-align: center;
+   }
+   .image-content {
+      order: 1;
+   }
+}
+
+@media (max-width: 578px) {
+   .kek {
+      width: 135px;
+      height: 30px;
+   }
+   .footer-title {
+      margin-left: 9%;
+   }
+   .footer-copyright {
+      text-align: right;
+   }
+}
+
+@media (max-width: 564px) {
+   .kek {
+      width: 80px;
+      height: 60px;
+   }
+}
+
+@media(max-width: 320px) {
+   .footer-copyright {
+      font-size: 14px;
+      line-height: 20px;
    }
 }
